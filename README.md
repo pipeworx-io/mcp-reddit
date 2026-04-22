@@ -2,19 +2,19 @@
 
 Reddit MCP — public Reddit data via JSON endpoints (no auth required)
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_subreddit` | Get hot posts from a subreddit. |
-| `search_posts` | Search Reddit posts by query string. |
-| `get_post` | Get a Reddit post and its top-level comments by post ID. |
+| `get_subreddit` | Get trending posts from a subreddit (e.g., \'python\', \'news\'). Returns titles, scores, authors, URLs, and comment counts. |
+| `search_posts` | Search Reddit posts by keyword or phrase across all subreddits. Returns matching posts with titles, scores, subreddits, authors, and URLs. |
+| `get_post` | Get a Reddit post\'s full content and top-level comments by post ID. Returns text, score, author, subreddit, and comment threads. |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
@@ -26,11 +26,32 @@ Add to your MCP client config:
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use reddit
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Reddit data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
