@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-reddit",
-  "version": "0.1.0",
-  "description": "Reddit MCP — public Reddit data via JSON endpoints (no auth required)",
+  "version": "0.1.1",
+  "description": "Reddit MCP — public Reddit data via the Atom/RSS feeds.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-reddit": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "reddit"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-reddit"
+    "url": "git+https://github.com/pipeworx-io/mcp-reddit.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-d93d3721739e7eb946ba2dc1c5e99cbeeef6699124ef100b84e7e0c7568cefb7",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
