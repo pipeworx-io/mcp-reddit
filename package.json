@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-reddit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reddit MCP — public Reddit data via the Atom/RSS feeds.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-d93d3721739e7eb946ba2dc1c5e99cbeeef6699124ef100b84e7e0c7568cefb7",
-    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
+    "sourceHash": "v1-69939a3de093080bb85b4ae14cb808382f255e482eb9373f0f06eba5d440511b",
+    "sourceCommit": "6fe8fb3e01138dfc4ebe7d5c246503aab9278d06"
   }
 }
