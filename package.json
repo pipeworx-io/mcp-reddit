@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-reddit",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Reddit MCP — public Reddit data via the Atom/RSS feeds.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-reddit": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "reddit"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-reddit.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/reddit",
   "pipeworx": {
-    "sourceHash": "v1-69939a3de093080bb85b4ae14cb808382f255e482eb9373f0f06eba5d440511b",
-    "sourceCommit": "6fe8fb3e01138dfc4ebe7d5c246503aab9278d06"
+    "mode": "gateway",
+    "slug": "reddit",
+    "gatewaySlug": "reddit",
+    "sourceHash": "v1-ebcbba428e19f393db12e28735bdf14b108d88d5a96ee4b5c8d3bdde8ffe8f2f",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }
