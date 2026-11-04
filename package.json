@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-reddit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Reddit MCP — public Reddit data via the Atom/RSS feeds.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "reddit",
     "gatewaySlug": "reddit",
-    "sourceHash": "v1-ebcbba428e19f393db12e28735bdf14b108d88d5a96ee4b5c8d3bdde8ffe8f2f",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-c3106dfd79b9aa3e9ee266d1eba6c70561159bfb361458bb293d898c3ac19615",
+    "sourceCommit": "db27387ed3ef7ec4805d465f7964a7f65f937006"
   }
 }
